@@ -1,0 +1,45 @@
+# Define weight, price per pound (ppp), 
+# flat charge (fc), flat charge premium (fcp), 
+# flat charge drone (fcd), and cost variable
+weight = 41.5
+ppp = 0.00
+fc = 20.00
+fcp = 125.00
+fcd = 0.00
+cost = 0.00
+
+# Define ground shipping variables in if/else 
+# statements for the cost of ground shipping
+if weight <= 2:
+  ppp = 1.50
+elif weight <= 6:
+  ppp = 3.00
+elif weight <= 10:
+  ppp = 4.00
+else:
+  ppp = 4.75
+
+# Update cost function value and print results
+cost = (weight * ppp) + fc
+print(weight, "lb * $", ppp, "+ $", fc, "= $", cost)
+print("Cost of ground shipping: $", cost)
+
+cost = (weight * ppp) + fcp
+print(weight, "lb * $", ppp, "+ $", fcp, "= $", cost)
+print("Cost of Premium ground shipping: $", cost)
+
+# Define drone shipping variables in if/else
+# statement for the cost of drone shipping
+if weight <= 2:
+  ppp = 4.50
+elif weight <= 6:
+  ppp = 9.00
+elif weight <= 10:
+  ppp = 12.00
+else:
+  ppp = 14.25
+
+# Update cost function value and print results
+cost = (weight * ppp) + fcd
+print(weight, "lb * $", ppp, "+ $", fcd, "= $", cost)
+print("Cost of Drone shipping: $", cost)
