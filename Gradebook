@@ -1,0 +1,30 @@
+last_semester_gradebook = [["politics", 80], ["latin", 96], ["dance", 97], ["architecture", 65]]
+
+# Your code below: 
+# List creation for subjects and grades
+subjects = ['physics', 'calculus', 'poetry', 'history']
+grades = [98, 97, 85, 88]
+
+# List creation for gradebook without using methods
+gradebook = [['physice', 98], ['calculus', 97], ['poetry', 85], ['history', 88]]
+
+# Print gradebook
+#print(gradebook)
+
+# Append gradebook
+gradebook.append(['computer science', 100])
+gradebook.append(['visual arts', 93])
+
+# Add 5 points to the grade for visual arts
+gradebook[-1][-1] = 98
+
+# Remove the grade associated with poetry
+gradebook[2].remove(85)
+
+# Append the gradebook to add "Pass" to poetry
+gradebook[2].append('Pass')
+
+# Create List combining Last semester gradebook
+# with this semester gradebook. Print full_gradebook
+full_gradebook = last_semester_gradebook + gradebook
+print(full_gradebook)
