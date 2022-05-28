@@ -1,0 +1,46 @@
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+# Your code starts here
+# Create variable for total price and add up 
+# the prices into the variable
+total_price = 0
+for price in prices:
+  total_price += price
+
+# Create a variable for average price and 
+# calculate the average of the total price
+average_price = total_price/len(prices)
+
+# Print average price with a price statement before
+print("Average Haircut Price:", average_price)
+
+# Create a new price list that subtracts 5 
+# from the prices, and print the new prices.
+new_prices = [price - 5 for price in prices]
+print(new_prices)
+
+# Create a variable for total revenue. 
+# Create a for loop that goes from 0 to 
+# length of the hairstyles list, and calculates
+# the total revenue from last week
+
+total_revenue = 0
+for i in range(len(hairstyles)):
+  total_revenue += prices[i] * last_week[i]
+
+# Print total revenue with statement
+print("Total Revenue:", total_revenue)
+
+# Create average daily revenue and print it
+average_daily_revenue = total_revenue / 7
+print("Average Daily Revenue:", average_daily_revenue)
+
+# Create a variable and loop that shows haircuts under
+# 30. Print the hairstyles under 30.
+cuts_under_30 = [hairstyles[i] for i in range(len(hairstyles)) if new_prices[i] < 30]
+print(cuts_under_30)
+
